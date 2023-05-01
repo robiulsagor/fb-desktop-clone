@@ -905,6 +905,12 @@ hr {
     background: var(--btn-bg-1);
     padding: .8rem .5rem;
     border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.pt-bottom img:hover {
+    background: #0000005f;
 }
 
 .profile-main {
