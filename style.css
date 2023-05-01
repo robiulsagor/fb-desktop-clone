@@ -67,6 +67,11 @@ a:link {
 .more {
     font-size: .8rem;
     color: #2b77d5;
+    cursor: pointer;
+}
+
+.more:hover {
+    text-decoration: underline;
 }
 
 body {
@@ -794,7 +799,7 @@ hr {
     width: 1120px;
     max-width: 1120px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .cover-photo img {
@@ -867,11 +872,23 @@ hr {
     align-items: center;
     border-radius: 4px;
     color: var(--txt1);
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.pt-top div:hover {
+    background: #3f69d4;
+    color: #ffff;
 }
 
 .pt-top div:last-child {
     background: #3f69d4;
     color: #fff;
+}
+
+.pt-top div:last-child:hover {
+    background: #333;
+    /* color: #333; */
 }
 
 .pt-top img {
