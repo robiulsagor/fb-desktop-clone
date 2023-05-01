@@ -12,7 +12,7 @@ theme_toggle_btn.addEventListener("click", () => {
     switchBtn.classList.toggle("on")
     document.body.classList.toggle("dark-theme")
 
-    if (localStorage.getItem("theme", "light")) {
+    if (localStorage.getItem("theme") == "light") {
         localStorage.setItem("theme", "dark")
     } else {
         localStorage.setItem("theme", "light")
@@ -46,3 +46,15 @@ if (localStorage.getItem("theme") == "light") {
 } else {
     localStorage.setItem("theme", "light")
 }
+
+// fake loading
+const loadBtn = document.querySelector(".load-btn")
+const loadErr = document.querySelector(".load_err")
+
+loadBtn.addEventListener("click", () => {
+    loadBtn.innerHTML = "Loading..."
+    setTimeout(() => {
+        loadBtn.style.display = "none"
+        loadErr.classList.add("show")
+    }, 2000)
+})

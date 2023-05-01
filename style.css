@@ -16,6 +16,7 @@
     --search-border: #3f69d4;
     --txt1: #555;
     --txt2: #666;
+    --hover-effect: #0404041b;
 }
 
 .dark-theme {
@@ -28,6 +29,7 @@
     --search-border: #f8f8f8;
     --txt1: #dfdfdf;
     --txt2: #c0c0c0;
+    --hover-effect: #fafafa33;
 }
 
 .icon {
@@ -215,10 +217,11 @@ nav .container {
     cursor: pointer;
     transition: .3s;
     border-radius: 7px;
+    color: var(--txt1);
 }
 
 .option:hover {
-    background: #00000010;
+    background: var(--hover-effect);
 }
 
 .option div {
@@ -601,12 +604,45 @@ hr {
     background: #fff;
 }
 
+.load_err {
+    color: #db3c3c;
+    position: relative;
+    display: none;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.load_err.show {
+    display: inline-block;
+}
+
+.load_err::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    background: #db3c3c;
+    height: 2px;
+    width: 20px;
+}
+
+.load_err::after {
+    content: '';
+    position: absolute;
+    right: -26px;
+    top: 50%;
+    background: #db3c3c;
+    height: 2px;
+    width: 20px;
+}
+
 /* right =================== */
 
 .right {
     background: var(--right-side);
     border-radius: 6px;
     padding: 0rem 1rem;
+    padding-bottom: 1rem;
 }
 
 .section-header {
@@ -707,7 +743,7 @@ hr {
 }
 
 .chat:hover {
-    background: #0000001b;
+    background: var(--hover-effect)
 }
 
 /* ============ */
