@@ -43,6 +43,7 @@ body {
     background-color: var(--body-color);
     width: 100vw !important;
     overflow-x: hidden;
+    transition: background .3s;
 }
 
 .container {
@@ -60,6 +61,7 @@ nav {
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    transition: background .3s;
 }
 
 .logo {
@@ -183,7 +185,7 @@ nav .container {
     top: 155%;
     width: 370px;
     right: 0;
-    background: #fff;
+    background: var(--bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #777;
     border-radius: 7px;

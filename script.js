@@ -8,8 +8,15 @@ drop_btn.addEventListener("click", () => {
 })
 
 theme_toggle_btn.addEventListener("click", () => {
+
     switchBtn.classList.toggle("on")
     document.body.classList.toggle("dark-theme")
+
+    if (localStorage.getItem("theme", "light")) {
+        localStorage.setItem("theme", "dark")
+    } else {
+        localStorage.setItem("theme", "light")
+    }
 })
 
 // close dropdown menu if clicked outside
@@ -29,3 +36,13 @@ document.addEventListener("click", e => {
         nav_user_profile.classList.remove("show-dropdown")
     }
 })
+
+if (localStorage.getItem("theme") == "light") {
+    switchBtn.classList.remove("on")
+    document.body.classList.remove("dark-theme")
+} else if (localStorage.getItem("theme") == "dark") {
+    switchBtn.classList.add("on")
+    document.body.classList.add("dark-theme")
+} else {
+    localStorage.setItem("theme", "light")
+}
