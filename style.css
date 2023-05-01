@@ -17,6 +17,9 @@
     --txt1: #555;
     --txt2: #666;
     --hover-effect: #0404041b;
+    --load-btn-bg-hover: #444;
+    --load-btn-txt-hover: #fff;
+    --btn-bg-1: #00000029;
 }
 
 .dark-theme {
@@ -30,6 +33,9 @@
     --txt1: #dfdfdf;
     --txt2: #c0c0c0;
     --hover-effect: #fafafa33;
+    --load-btn-bg-hover: #e0e0e0;
+    --load-btn-txt-hover: #000;
+    --btn-bg-1: #ffffff50;
 }
 
 .icon {
@@ -193,7 +199,7 @@ nav .container {
     border-radius: 7px;
     height: 0;
     overflow: hidden;
-    transition: .3s;
+    transition: .2s;
 }
 
 .user {
@@ -598,10 +604,12 @@ hr {
     border-radius: 7px;
     cursor: pointer;
     transition: .3s;
+    color: var(--txt1);
 }
 
 .load-btn:hover {
-    background: #fff;
+    background: var(--load-btn-bg-hover);
+    color: var(--load-btn-txt-hover);
 }
 
 .load_err {
@@ -747,3 +755,120 @@ hr {
 }
 
 /* ============ */
+/* END OF HOMEPAGE */
+/* ====================================================================================================================== */
+/* BEGINing OF PROFILE PAGE */
+
+.profile-container {
+    width: 1120px;
+    /* height: 40vh; */
+    margin: auto;
+    margin-top: 100px;
+}
+
+.cover-photo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.profile-top {
+    display: flex;
+    background: var(--bg-color);
+    justify-content: space-between;
+    margin: 1rem 0;
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--txt2);
+}
+
+.profile-photo-big {
+    width: 120px;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.pt-left {
+    display: flex;
+    align-items: start;
+    gap: 1.4rem;
+}
+
+
+.pname {
+    display: flex;
+    flex-direction: column;
+    gap: .97rem;
+    justify-content: space-between;
+}
+
+.pname h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6rem;
+    font-size: 1.8rem;
+}
+
+.pname span {
+    font-size: .9rem;
+}
+
+.friend-img img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.pt-right {
+    /* background: #000; */
+}
+
+.pt-top {
+    display: flex;
+    gap: .9rem;
+}
+
+.pt-top div {
+    background: var(--btn-bg-1);
+    font-size: .9rem;
+    padding: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border-radius: 4px;
+    color: var(--txt1);
+}
+
+.pt-top div:last-child {
+    background: #3f69d4;
+    color: #fff;
+}
+
+.pt-top img {
+    width: 20px;
+}
+
+.pt-bottom {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.pt-bottom img {
+    width: 40px;
+    background: var(--btn-bg-1);
+    padding: .8rem .5rem;
+    border-radius: 4px;
+}
+
+.profile-main {
+    display: flex;
+}
+
+.main-left {
+    flex-basis: 33%;
+    border: 1px solid #555;
+}
+
+.main-right {
+    flex-basis: 67%;
+    border: 1px solid #ac1c1c;
+}
