@@ -140,8 +140,10 @@ nav {
     align-items: center;
 }
 
-.nav-left ul li img {
-    width: 28px;
+.nav-left ul li i {
+    /* width: 28px; */
+    font-size: 1.8rem;
+    color: #fff;
     margin: 0 15px;
 }
 
