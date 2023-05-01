@@ -46,6 +46,29 @@ a:link {
     text-decoration: none;
 }
 
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header {
+    font-size: 1.17rem;
+    font-weight: 600;
+    color: var(--txt1);
+}
+
+.container-sub-header {
+    display: block;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.more {
+    font-size: .8rem;
+    color: #2b77d5;
+}
+
 body {
     font-family: Poppins;
     background-color: var(--body-color);
@@ -348,6 +371,10 @@ hr {
     font-weight: 600;
 }
 
+.main-left .section-title {
+    /* font-size: 1.17rem; */
+}
+
 .footer-links, .footer-links a, .footer-links span {
     color: var(--txt2);
     font-size: .75rem;
@@ -448,6 +475,10 @@ hr {
     border-radius: 6px;
     align-items: flex-start;
     justify-content: baseline;
+}
+
+.main-right .write-post-container {
+    margin-top: 0;
 }
 
 .profile-img {
@@ -761,7 +792,7 @@ hr {
 
 .profile-container {
     width: 1120px;
-    /* height: 40vh; */
+    max-width: 1120px;
     margin: auto;
     margin-top: 100px;
 }
@@ -861,14 +892,73 @@ hr {
 
 .profile-main {
     display: flex;
+    gap: 1.4rem;
 }
 
 .main-left {
-    flex-basis: 33%;
-    border: 1px solid #555;
+    flex: 3;
+    /* position: sticky;
+    top: 85px;
+    align-self: flex-start;
+    height: 190vh; */
+}
+
+.left-containers {
+    background: var(--bg-color);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--txt1);
+    margin-bottom: 1.3rem;
+}
+
+.intro-container {
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.intro-txt {
+    color: var(--txt1);
+    text-align: center;
+    font-size: .93rem;
+    margin: .8rem .3rem;
+    opacity: .8;
+}
+
+.work {
+    list-style: none;
+}
+
+.work li {
+    padding: .8rem 0;
+}
+
+.work li:first-child {
+    padding-top: 1rem;
+}
+
+.work li span {
+    margin-left: .5rem;
+    font-size: .9rem;
+}
+
+.photos, .friends {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    margin-top: .6rem;
+}
+
+.photos img, .friends img {
+    width: 95px;
+}
+
+.friends span {
+    font-size: .8rem;
+    display: block;
+    text-align: center;
+    margin-top: -.2rem;
 }
 
 .main-right {
-    flex-basis: 67%;
-    border: 1px solid #ac1c1c;
+    flex: 7;
+
 }
